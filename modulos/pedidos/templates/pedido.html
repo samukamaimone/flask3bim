@@ -10,19 +10,19 @@
         {% endfor %}
     {% endif %}
     <div>
-        <a href="/pizzas/add">Adicionar</a>
+        <a href="/pedidos/add">Adicionar</a>
     </div>
     <table>
         <tr>
-            <th>Sabor</th>
-            <th>Ingredientes</th>
-            <th>Preco</th>
+            <th>Usuario</th>
+            <th>Pizza</th>
+            <th>Data</th>
         </tr>
-        {% for p in pizzas %}
+        {% for p in pedidos %}
         <tr>
-            <td>{{p.sabor}}</td>
-            <td>{{p.ingredientes}}</td>
-            <td>{{p.preco}}</td>
+            <td>{{p.usuario.nome}}</td>
+            <td>{{p.pizza.sabor}}</td>
+            <td>{{p.data}}</td>
         </tr>
         {% endfor %}
     </table>
